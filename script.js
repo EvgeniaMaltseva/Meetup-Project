@@ -149,15 +149,45 @@ function displayEvents(arr, nameContainer) {
     eventDay.classList.add("event-day");
     eventDay.innerHTML = `${element.date}`;
 
+    const ticketsContainer = document.createElement("div");
+    ticketsContainer.classList.add("tickets-container");
+    const ticketsSold = document.createElement("div");
+    ticketsSold.classList.add("tickets-sold");
+    const ticketsSoldCardImg = document.createElement("img");
+    ticketsSoldCardImg.setAttribute(
+      "src",
+      "assets/img/Events near/Checkmark.png"
+    );
+    ticketsSoldCardImg.setAttribute("alt", "eventTicketsSoldCardImg");
+    const going = document.createElement("p");
+    going.classList.add("going");
+    going.textContent = `${element.attendees}`.toString() + "going";
+    const ticketsFree = document.createElement("div");
+    ticketsFree.classList.add("tickets-free");
+    const ticketsFreeCardImg = document.createElement("img");
+    ticketsFreeCardImg.setAttribute("src", "assets/img/Events near/Ticket.png");
+    ticketsFreeCardImg.setAttribute("alt", "eventTicketsSoldCardImg");
+    const free = document.createElement("p");
+    free.classList.add("free");
+    free.textContent = "Free";
+    ticketsSold.append(ticketsSoldCardImg, going);
+    ticketsFree.append(ticketsFreeCardImg, free);
+    ticketsContainer.append(ticketsSold, ticketsFree);
+
     eventCardContainer.append(
       eventCardImg,
       eventThemeContainer,
-      eventInfoContainer
+      eventInfoContainer,
+      ticketsContainer
     );
     eventThemeContainer.append(eventThemeTitle, eventThemeDescription);
     eventInfoContainer.append(eventTimeContainer);
     eventTimeContainer.append(calenderIcon, eventDay);
     nameContainer.append(eventCardContainer);
+
+    if (!element.attendees) {
+      going.textContent = "0 going";
+    }
   });
 }
 

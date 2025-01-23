@@ -103,12 +103,32 @@ function displayEventsNY(arr, nameContainer) {
     nyEventInfoContainer.append(nyEventTimeContainer);
     nyEventTimeContainer.append(calenderIcon, nyEventDay);
 
+    const ticketsContainer = document.createElement("div");
+    ticketsContainer.classList.add("ny-tickets-container");
+    const ticketsSold = document.createElement("div");
+    ticketsSold.classList.add("attendees-container");
+    const going = document.createElement("p");
+    going.classList.add("attendees");
+    going.textContent = `${element.attendees}`.toString() + " attendees";
+    // const ticketsFree = document.createElement("div");
+    // ticketsFree.classList.add("tickets-free");
+
+    // const free = document.createElement("p");
+    // free.classList.add("free");
+    // free.textContent = "Free";
+    ticketsSold.append(going);
+    // ticketsFree.append(free);
+    ticketsContainer.append(ticketsSold);
+    if (!element.attendees) {
+      going.textContent = " ";
+    }
+
     nyEventCardContainer.append(
       nyEventCardImg,
       nyEventThemeContainer,
       nyEventInfoContainer
     );
-    nameContainer.append(nyEventCardContainer);
+    nameContainer.append(nyEventCardContainer, ticketsContainer);
   });
 }
 document.addEventListener("DOMContentLoaded", function () {

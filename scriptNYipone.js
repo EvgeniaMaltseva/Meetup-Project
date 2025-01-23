@@ -84,6 +84,9 @@ function displayEventsNY(arr, nameContainer) {
     const nyEventDay = document.createElement("div");
     nyEventDay.classList.add("event-day");
     nyEventDay.innerHTML = `${element.date}`;
+    const eventThemeAndDayContainer = document.createElement("div");
+    eventThemeAndDayContainer.classList.add("event-theme-and-day-container");
+    const eventThemeContainer = document.createElement("div");
     const nyEventThemeContainer = document.createElement("div");
     nyEventThemeContainer.classList.add("event-theme");
     const nyEventThemeTitle = document.createElement("p");
@@ -95,18 +98,33 @@ function displayEventsNY(arr, nameContainer) {
     const nyEventThemeCategory = document.createElement("p");
     nyEventThemeCategory.classList.add("event-theme-category");
     nyEventThemeCategory.textContent = `${element.category}`;
-    const nyEventThemeDistance = document.createElement("p");
-    nyEventThemeDistance.classList.add("event-theme-distance");
-    nyEventThemeDistance.textContent = `${element.distance}`.toString() + "km";
-    nyEventThemeDescription.append(nyEventThemeCategory, nyEventThemeDistance);
+
+    const streamType = document.createElement("div");
+    streamType.classList.add("stream-type");
+    const eventTypeCardImg = document.createElement("img");
+    eventTypeCardImg.classList.add("stream-type-img");
+    eventTypeCardImg.setAttribute("src", "assets/img/Events near/Kamera.svg");
+    eventTypeCardImg.setAttribute("alt", "Kameraimg");
+    const eventTypeDescription = document.createElement("p");
+    eventTypeDescription.classList.add("online");
+    eventTypeDescription.textContent = `${element.type}` + " Event";
+
+    if (element.type === "offline") {
+      eventTypeDescription.textContent = " ";
+      eventTypeCardImg.style.display = "none";
+    }
+
+    nyEventThemeDescription.append(nyEventThemeCategory);
+    streamType.append(eventTypeCardImg, eventTypeDescription);
+    nyEventThemeDescription.append(streamType);
     nyEventThemeContainer.append(nyEventThemeTitle, nyEventThemeDescription);
     nyEventInfoContainer.append(nyEventTimeContainer);
     nyEventTimeContainer.append(calenderIcon, nyEventDay);
 
-    nyEventCardContainer.append(
-      nyEventCardImg,
-      nyEventThemeContainer,
-      nyEventInfoContainer
+    nyEventCardContainer.append(nyEventCardImg, eventThemeAndDayContainer);
+    eventThemeAndDayContainer.append(
+      nyEventInfoContainer,
+      nyEventThemeContainer
     );
     nameContainer.append(nyEventCardContainer);
   });

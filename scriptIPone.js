@@ -122,6 +122,8 @@ function displayEvents(arr, nameContainer) {
     eventCardImg.classList.add("event-card-img");
     eventCardImg.setAttribute("src", `${element.image}`);
     eventCardImg.setAttribute("alt", "eventimg");
+    const eventThemeAndDayContainer = document.createElement("div");
+    eventThemeAndDayContainer.classList.add("event-theme-and-day-container");
     const eventThemeContainer = document.createElement("div");
     eventThemeContainer.classList.add("event-theme");
     const eventThemeTitle = document.createElement("p");
@@ -132,10 +134,22 @@ function displayEvents(arr, nameContainer) {
     const eventThemeCategory = document.createElement("p");
     eventThemeCategory.classList.add("event-theme-category");
     eventThemeCategory.textContent = `${element.category}`;
-    const eventThemeDistance = document.createElement("p");
-    eventThemeDistance.classList.add("event-theme-distance");
-    eventThemeDistance.textContent = `${element.distance}`.toString() + " km";
-    eventThemeDescription.append(eventThemeCategory, eventThemeDistance);
+    const streamType = document.createElement("div");
+    streamType.classList.add("stream-type");
+    const eventTypeCardImg = document.createElement("img");
+    eventTypeCardImg.classList.add("stream-type-img");
+    eventTypeCardImg.setAttribute("src", "assets/img/Events near/Kamera.svg");
+    eventTypeCardImg.setAttribute("alt", "Kameraimg");
+    const eventTypeDescription = document.createElement("p");
+    eventTypeDescription.classList.add("online");
+    eventTypeDescription.textContent = `${element.type}` + " Event";
+
+    if (element.type === "offline") {
+      eventTypeDescription.textContent = " ";
+      eventTypeCardImg.style.display = "none";
+    }
+    streamType.append(eventTypeCardImg, eventTypeDescription);
+    eventThemeDescription.append(eventThemeCategory, streamType);
     eventThemeContainer.append(eventThemeTitle, eventThemeDescription);
 
     const eventInfoContainer = document.createElement("div");
@@ -148,15 +162,24 @@ function displayEvents(arr, nameContainer) {
     const eventDay = document.createElement("div");
     eventDay.classList.add("event-day");
     eventDay.innerHTML = `${element.date}`;
-
-    eventCardContainer.append(
-      eventCardImg,
-      eventThemeContainer,
-      eventInfoContainer
-    );
-    eventThemeContainer.append(eventThemeTitle, eventThemeDescription);
-    eventInfoContainer.append(eventTimeContainer);
     eventTimeContainer.append(calenderIcon, eventDay);
+    eventInfoContainer.append(eventTimeContainer);
+
+    const ticketsContainer = document.createElement("div");
+    ticketsContainer.classList.add("ny-tickets-container");
+    const ticketsSold = document.createElement("div");
+    ticketsSold.classList.add("attendees-container");
+    const going = document.createElement("p");
+    going.classList.add("attendees");
+    going.textContent = `${element.attendees}`.toString() + " attendees";
+    ticketsSold.append(going);
+    ticketsContainer.append(ticketsSold);
+
+    eventThemeAndDayContainer.append(eventInfoContainer, eventThemeContainer);
+
+    eventCardContainer.append(eventCardImg, eventThemeAndDayContainer);
+    eventThemeContainer.append(eventThemeTitle, eventThemeDescription);
+
     nameContainer.append(eventCardContainer);
   });
 }

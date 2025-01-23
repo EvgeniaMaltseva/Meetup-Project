@@ -88,6 +88,7 @@ body {
   display: flex;
   gap: 5px;
   padding-bottom: 10px;
+  padding-top: 40px;
 }
 .events-container-header-right {
   max-width: 164px;
@@ -115,6 +116,7 @@ body {
   display: flex;
   gap: 7px;
   justify-content: space-between;
+  border-top: 0.6px solid rgba(217, 217, 217, 1);
 }
 .event-card img,
 .event-card .event-theme,
@@ -122,10 +124,22 @@ body {
   flex: 1;
   margin: 5px;
 }
+.event-theme-discr {
+  display: flex;
+  flex-direction: column;
+}
+.stream-type-img {
+  width: 15px;
+  height: 15px;
+}
 .join-meetup-text {
   padding-top: 20px;
   font-weight: 400;
   font-size: 12px;
+}
+.event-theme-and-day-container {
+  display: flex;
+  flex-direction: column;
 }
 .event-info-container {
   display: flex;
@@ -174,6 +188,10 @@ body {
   color: rgba(112, 112, 112, 1);
   font-weight: 500;
   font-size: 7px;
+  justify-content: flex-start;
+  gap: 2px;
+  max-width: 70px;
+  align-items: center;
 }
 .online {
   color: rgba(112, 112, 112, 1);
@@ -272,7 +290,8 @@ body {
 .how-meetup-works-container {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  /* gap: 12px;
+  background-color: rgba(151, 202, 209, 0.08); */
 }
 .how-meetup-works-container-left,
 .how-meetup-works-container-right {
@@ -283,6 +302,7 @@ body {
   max-width: 360px;
   min-height: 112px;
   border-radius: 5px;
+  margin: 5px;
 }
 .how-meetup-works-container-left img,
 .how-meetup-works-container-right img {

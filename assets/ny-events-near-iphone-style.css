@@ -1,3 +1,22 @@
+.event-theme-and-day-container {
+  display: flex;
+  flex-direction: column;
+}
+.stream-type {
+  display: flex;
+  color: rgba(112, 112, 112, 1);
+  font-weight: 500;
+  font-size: 7px;
+  justify-content: flex-start;
+  gap: 2px;
+  max-width: 70px;
+  align-items: center;
+}
+.online {
+  color: rgba(112, 112, 112, 1);
+  font-weight: 500;
+  font-size: 7px;
+}
 .newyork-events-find-header a {
   font-weight: 500;
   font-size: 20px;

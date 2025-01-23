@@ -133,6 +133,8 @@ a {
 }
 .ny-tickets-container {
   gap: 16px;
+  position: relative;
+  left: 211px;
 }
 .ny-event-day,
 .ny-event-time {
