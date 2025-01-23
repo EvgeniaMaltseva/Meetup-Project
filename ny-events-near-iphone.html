@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/ny-events-near-iphone-style.css">
+    <link rel="stylesheet" href="assets/IPhone-style.css" />
+    <link rel="stylesheet" href="assets/ny-event-style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Events near New York IPhone</title>
+  </head>
+  <body>
+    <div class="IPhone-14-container">
+      <header class="header">
+        <div class="logo-search">
+          <div class="logo">
+            <img src="assets/img/Meetup logo.png" alt="Meetup logo" />
+            <div class="login-field">
+              <div class="language-field">
+                <img src="assets/img/Globe.png" alt="Globe" />
+                <p class="language">English</p>
+              </div>
+              <p class="login">Log in</p>
+              <button class="sign-up">Sign up</button>
+            </div>
+          </div>
+          <div class="search-form">
+            <form action="/search" method="get">
+              <label for="events"></label>
+              <input
+                class="events"
+                type="search"
+                id="events"
+                name="query"
+                placeholder="Search events"
+              />
+              <label for=""></label>
+              <button type="submit" class="search-button">
+                <img
+                  src="assets/img/search-loupe-white.svg"
+                  alt="search-loupe"
+                />
+              </button>
+            </form>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <!-- контейнер чтобы поместить весь контент в заранее ограниченный блок, за пределы которого контент не уйдет -->
+
+        
+        <div class="newyork-events-container">
+            <div class="newyork-events-find">
+              <div class="newyork-events-find-header">
+                <h2 class="newyork-events-title">Events near New York, NY</h2>
+
+                <a href="#">Events</a>
+              </div>
+              <div class="newyork-events-filter">
+                <div class="dropdown-menu">
+                  <div class="dropbtn-container">
+                    <p class="dropbtn">Any type</p>
+                    <img src="assets/img/checked.svg" alt="checkedmark" />
+                    <div class="dropdown-menu-theme">
+                      <a href="#">Online</a>
+                      <a href="#">Offline</a>
+                    </div>
+                  </div>
+    
+                  <div class="dropbtn-container">
+                    <p class="dropbtn">Any distance</p>
+                    <img src="assets/img/checked.svg" alt="checkedmark" />
+                    <div class="dropdown-menu-distance">
+                      <a href="#">5 km</a>
+                      <a href="#">10 km</a>
+                      <a href="#">15 km</a>
+                      <a href="#">25 km</a>
+                      <a href="#">50 km</a>
+                      <a href="#">75 km</a>
+                      <a href="#">100 km</a>
+                    </div>
+                  </div>
+    
+                  <div class="dropbtn-container">
+                    <p class="dropbtn">Any category</p>
+                    <img src="assets/img/checked.svg" alt="checkedmark" />
+                    <div class="dropdown-menu-category">
+                      <a href="#">Business</a>
+                      <a href="#">Hobbies and passions</a>
+                      <a href="#">Technology</a>
+                      <a href="#">Health and Wellbeing</a>
+                      <a href="#">Social Activities</a>
+                    </div>
+                  </div>
+                </div>
+                <img src="assets/img/NewYorkEvents/Border.svg" alt="Border">
+              </div>
+            </div>
+        <div class="cards-container">
+        </div>
+      </main>
+      
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-header">
+          <p class="footer-header-text">Create your own Meetup group.</p>
+          <button class="footer-header-btn">Get started</button>
+        </div>
+        <div class="footer-navmenu">
+          <nav class="footer-navmenu-left">
+            <h3 class="footer-navmenu-left-title">Your Account</h3>
+            <div class="footer-navmenu-left-links">
+              <a href="#home">Sign up</a>
+              <a href="#login">Log in</a>
+              <a href="#help">Help</a>
+              <a href="#become">Become an Affiliate</a>
+            </div>
+          </nav>
+          <nav class="footer-navmenu-middle">
+            <h3 class="footer-navmenu-middle-title">Discover</h3>
+            <div class="footer-navmenu-middle-links">
+              <a href="#groups">Groups</a>
+              <a href="#calender">Calender</a>
+              <a href="#topics">Topics</a>
+              <a href="#cities">Cities</a>
+              <a href="#online">Online events</a>
+              <a href="#guides">Local guides</a>
+              <a href="#make">Make friends</a>
+            </div>
+          </nav>
+          <nav class="footer-navmenu-right">
+            <h3 class="footer-navmenu-right-title">Meet up</h3>
+            <div class="footer-navmenu-middle-links">
+              <a href="#about">About</a>
+              <a href="#blog">Blog</a>
+              <a href="#meetuppro">Meetup Pro</a>
+              <a href="#careers">Careers</a>
+              <a href="#apps">Apps</a>
+              <a href="#podcast">Podcast</a>
+            </div>
+          </nav>
+        </div>
+        <div class="follow">
+          <h4 class="follow-title">Follow us</h4>
+          <div class="follow-img-container">
+            <div class="follow-img">
+              <img src="assets/img/Follow/Facebook.svg" alt="Facebook" />
+              <img src="assets/img/Follow/Twitter.svg" alt="Twitter" />
+              <img src="assets/img/Follow/Youtoube.svg" alt="Youtoube" />
+              <img src="assets/img/Follow/Instagram.svg" alt="Instagram" />
+              <img src="assets/img/Follow/TikTok.svg" alt="TikTok" />
+            </div>
+          </div>
+        </div>
+        <div class="footer-panel">
+          <nav class="footer-panel-nav">
+            <a href="#">© 2024 Meetup</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <script src="scriptNYipone.js"></script>
+  </body>
+</html>

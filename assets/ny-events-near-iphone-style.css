@@ -1,0 +1,85 @@
+.newyork-events-find-header a {
+  font-weight: 500;
+  font-size: 20px;
+  color: rgba(0, 121, 138, 1);
+  border-bottom: 4px;
+  line-height: 28px;
+}
+.newyork-events-find-header {
+  padding-bottom: 12px;
+}
+.dropdown-menu {
+  position: relative;
+  display: flex;
+  gap: 18px;
+  padding-bottom: 10px;
+}
+.dropdown-menu-theme,
+.dropdown-menu-distance,
+.dropdown-menu-category {
+  display: none;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+.dropdown-menu a {
+  text-decoration: none;
+  display: block;
+}
+/* Изменение цвета выпадающих ссылок при наведении курсора */
+.dropdown-menu a:hover {
+  background-color: #dddddd;
+}
+/* Показать выпадающее меню при наведении курсора  */
+.dropbtn-container:hover .dropdown-menu-theme,
+.dropbtn-container:hover .dropdown-menu-distance,
+.dropbtn-container:hover .dropdown-menu-category {
+  display: block;
+  position: absolute;
+  top: 44px;
+  padding: 10px;
+  border-radius: 0 0 8px 8px;
+  background-color: lightgray;
+}
+.dropdown-menu-theme:hover,
+.dropdown-menu-distance:hover,
+.dropdown-menu-category:hover {
+  display: block;
+}
+
+.dropbtn-container {
+  height: 46px;
+  background-color: rgba(246, 247, 248, 1);
+  border: none;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  gap: 12px;
+}
+.dropbtn-container img {
+  width: 14px;
+}
+.dropbtn {
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgba(33, 33, 33, 1);
+  padding: 16px 11px 16px 16px;
+  border-radius: 40px;
+}
+.cards-container {
+  padding-top: 18px;
+}
+.event-card {
+  border-top: 1px solid rgba(217, 217, 217, 1);
+}
+.footer-header-text {
+  align-items: center;
+  display: flex;
+}
+.event-card-img,
+.event-info-container {
+  padding-top: 10px;
+}

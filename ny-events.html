@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="assets/ny-event-style.css" />
+
+    <title>Events</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-search">
+        <div class="logo">
+          <img src="assets/img/Meetup logo.png" alt="Meetup logo" />
+        </div>
+        <form class="search-form" action="/search" method="get">
+          <label for="events"></label>
+          <input
+            class="events"
+            type="search"
+            id="events"
+            name="query"
+            placeholder="Search events"
+          />
+          <input class="city" type="text" id="city" />
+          <button type="submit" class="search-button">
+            <img src="assets/img/search-loupe-white.svg" alt="search-loupe" />
+          </button>
+        </form>
+      </div>
+
+      <div class="login-field">
+        <div class="language-field">
+          <img src="assets/img/Globe.png" alt="Globe" />
+          <p class="language">English</p>
+        </div>
+        <p class="login">Log in</p>
+        <button class="sign-up">Sign up</button>
+      </div>
+    </header>
+    <main class="main">
+      <div class="newyork-events-container">
+        <div class="newyork-events-find">
+          <div class="newyork-events-find-header">
+            <h2 class="newyork-events-title">Events near New York, NY</h2>
+            <div class="find-event">
+              <p>Find events near</p>
+              <p>NEW YORK, NY</p>
+            </div>
+          </div>
+          <a href="#">Events</a>
+          <div class="newyork-events-filter">
+            <div class="dropdown-menu">
+              <div class="dropbtn-container">
+                <p class="dropbtn">Any type</p>
+                <img src="assets/img/checked.svg" alt="checkedmark" />
+                <div class="dropdown-menu-theme">
+                  <a href="#">Online</a>
+                  <a href="#">Offline</a>
+                </div>
+              </div>
+
+              <div class="dropbtn-container">
+                <p class="dropbtn">Any distance</p>
+                <img src="assets/img/checked.svg" alt="checkedmark" />
+                <div class="dropdown-menu-distance">
+                  <a href="#">5 km</a>
+                  <a href="#">10 km</a>
+                  <a href="#">15 km</a>
+                  <a href="#">25 km</a>
+                  <a href="#">50 km</a>
+                  <a href="#">75 km</a>
+                  <a href="#">100 km</a>
+                </div>
+              </div>
+
+              <div class="dropbtn-container">
+                <p class="dropbtn">Any category</p>
+                <img src="assets/img/checked.svg" alt="checkedmark" />
+                <div class="dropdown-menu-category">
+                  <a href="#">Business</a>
+                  <a href="#">Hobbies and passions</a>
+                  <a href="#">Technology</a>
+                  <a href="#">Health and Wellbeing</a>
+                  <a href="#">Social Activities</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120907.46899446458!2d-74.0478541255046!3d40.7127757998042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a0b360b9b5f%3A0x3d8c8d1b5df08e59!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1674136097741!5m2!1sen!2sus"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+        <div class="newyork-events-cards-container">
+          <div class="ny-cards-container"></div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-header">
+          <p class="footer-header-text">Create your own Meetup group.</p>
+          <button class="footer-header-btn">Get started</button>
+        </div>
+        <div class="footer-navmenu">
+          <nav class="footer-navmenu-left">
+            <h3 class="footer-navmenu-left-title">Your Account</h3>
+            <div class="footer-navmenu-left-links">
+              <a href="#home">Sign up</a>
+              <a href="#login">Log in</a>
+              <a href="#help">Help</a>
+              <a href="#become">Become an Affiliate</a>
+            </div>
+          </nav>
+          <nav class="footer-navmenu-middle">
+            <h3 class="footer-navmenu-middle-title">Discover</h3>
+            <div class="footer-navmenu-middle-links">
+              <a href="#groups">Groups</a>
+              <a href="#calender">Calender</a>
+              <a href="#topics">Topics</a>
+              <a href="#cities">Cities</a>
+              <a href="#online">Online events</a>
+              <a href="#guides">Local guides</a>
+              <a href="#make">Make friends</a>
+            </div>
+          </nav>
+          <nav class="footer-navmenu-right">
+            <h3 class="footer-navmenu-right-title">Meet up</h3>
+            <div class="footer-navmenu-middle-links">
+              <a href="#about">About</a>
+              <a href="#blog">Blog</a>
+              <a href="#meetuppro">Meetup Pro</a>
+              <a href="#careers">Careers</a>
+              <a href="#apps">Apps</a>
+              <a href="#podcast">Podcast</a>
+            </div>
+          </nav>
+        </div>
+        <div class="follow">
+          <h4 class="follow-title">Follow us</h4>
+          <div class="follow-img-container">
+            <div class="follow-img">
+              <img src="assets/img/Follow/Facebook.svg" alt="Facebook" />
+              <img src="assets/img/Follow/Twitter.svg" alt="Twitter" />
+              <img src="assets/img/Follow/Youtoube.svg" alt="Youtoube" />
+              <img src="assets/img/Follow/Instagram.svg" alt="Instagram" />
+              <img src="assets/img/Follow/TikTok.svg" alt="TikTok" />
+            </div>
+            <div class="follow-btn">
+              <btn class="googleplay"
+                ><img src="assets/img/Follow/Google Play.svg" alt="Google Play"
+              /></btn>
+              <btn class="appstore"
+                ><img src="assets/img/Follow/App Store.svg" alt="App Store"
+              /></btn>
+            </div>
+          </div>
+        </div>
+        <div class="footer-panel">
+          <nav class="footer-panel-nav">
+            <a href="#">© 2024 Meetup</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Do not Sell or Share My Personal Data</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Help</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scriptNY.js"></script>
+  </body>
+</html>
